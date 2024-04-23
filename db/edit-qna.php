@@ -13,7 +13,9 @@ if (!$row) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $qna->updateQnA($id, $_POST['question'], $_POST['answer']);
-    header("Location: /index.php");
+    $qna->updateQnA($id, $_POST['otazka'], $_POST['odpoved']);
+    header("Location: ../index.php");
     exit;
+} else {
+    echo "Chyba";
 }

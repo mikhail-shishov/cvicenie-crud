@@ -16,6 +16,7 @@
     border: 1px solid black;
     padding: 10px 18px;
     border-radius: 20px;
+    position: relative;
 }
 
 .qna-question {
@@ -33,18 +34,44 @@
     display: none;
 }
 
-.qna-edit .link {
-    margin-right: 5px;
+.qna-edit {
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    bottom: 3px;
+    background-color: #eee;
+    padding: 1px 5px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.qna-edit .link + .link {
+    margin-top: 3px;
 }
 
 .is-shown .qna-answer {
     display: block;
     margin-top: 7px;
+    max-width: 90%;
 }
 
 .link {
     color: black;
     display: inline-block;
+    transition: .3s;
+}
+
+.link:hover {
+    color: blue;
+}
+
+.qna-edit .link:last-child {
+    color: orangered;
+}
+
+.qna-edit .link:last-child:hover {
+    color: red;
 }
 
 .form {

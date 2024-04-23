@@ -22,8 +22,8 @@ class QnA extends Database
         $sql = "UPDATE qna SET otazka = :question, odpoved = :answer WHERE id = :id";
         $statement = $this->connection->prepare($sql);
         $statement->bindParam(':id', $id);
-        $statement->bindParam(':otazka', $question);
-        $statement->bindParam(':odpoved', $answer);
+        $statement->bindParam(':question', $question);
+        $statement->bindParam(':answer', $answer);
         $statement->execute();
     }
 
