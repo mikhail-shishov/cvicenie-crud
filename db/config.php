@@ -1,0 +1,1 @@
+<?php define('DATABASE', ['HOST' => 'localhost', 'DBNAME' => 'cvicenie-crud', 'PORT' => 3306, 'USER_NAME' => 'root', 'PASSWORD' => '']);
